@@ -51,7 +51,7 @@ class SentenceGenerator(object):
             cur_word = choice[0]
             sentence.append(cur_word)
 
-        return " ".join(sentence).encode('ascii', 'ignore')
+        return " ".join(sentence).encode('ascii', 'ignore').decode()
 
     def parse_file(self, filename):
         with open(filename) as f:
